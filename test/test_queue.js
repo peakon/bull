@@ -1896,7 +1896,7 @@ describe('Queue', () => {
       queue2.process(job => {
         processedCount++;
         expect(job.data.foo).to.be.equal('bar');
-        return delay(1500);
+        return delay(400);
       });
 
       queue2.on('completed', () => {
